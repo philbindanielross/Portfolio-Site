@@ -1,0 +1,246 @@
+/* COLORS
+primary: #EEC302
+lighter: #FFFBF5
+dark gray: #343a40
+light gray: #e9ecef
+
+TYPEFACE
+paragraphs: Roboto 
+headers: Akshar
+*/
+
+/* UNIVERSAL STYLES */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #eec302;
+  --primary-color-lighter: #eec30278;
+  --dark-gray: #343a40;
+  --light-gray: #e9ecef;
+  --off-white: #fffbf5;
+  --black: #000;
+  --white: #fff;
+  --sky-dark: #0035664b;
+  --sky-med: #63006615;
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --border: solid 2px;
+}
+body {
+  color: var(--dark-gray);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ALL PAGES */
+h1,
+h2,
+h3 {
+  font-family: "Akshar";
+}
+h1 {
+  font-size: 80px;
+  line-height: 1;
+}
+h2 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+p {
+  max-width: 600px;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-link,
+.nav-link:visited {
+  font-family: "Akshar";
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 8px 16px;
+  letter-spacing: -0.8px;
+  transition: ease-in-out 0.2s;
+  font-weight: var(--font-weight-semi-bold);
+}
+/* I can't figure out why this semi-bold value won't apply */
+.nav-link:hover,
+.nav-link:active {
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+.nav-link:focus {
+  border-width: 2px;
+  border-color: var(--primary-color);
+}
+.nav-link-active {
+  /* padding: 8px; */
+  border: var(--border) var(--primary-color);
+}
+.button {
+  padding: 16px 16px;
+  color: var(--dark-gray);
+  border-radius: 8px;
+  display: inline-block;
+  border: none;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: ease-in-out 0.4s;
+}
+.primary-button:visited,
+.primary-button:focus {
+  background-color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  /* border-radius: 2px;
+  border-color: #343a40; */
+}
+.primary-button:hover {
+  background-color: var(--primary-color-lighter);
+  cursor: pointer;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 16px 40px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border) var(--dark-gray);
+}
+.logo {
+  width: 100px;
+}
+.page-footer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  display: flex;
+}
+.social-media {
+  display: flex;
+  align-items: center;
+}
+.socials-icon {
+  width: 32px;
+  margin: 8px;
+}
+.grid-container {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin: 80px auto;
+}
+.grid-item {
+  background-color: var(--light-gray);
+  padding: 24px;
+  max-width: 480px;
+  /* min-width: 450px; */
+}
+
+/* INDEX */
+.cta-link {
+  text-decoration: none;
+  margin-top: 80px;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.profile-img {
+  width: 250px;
+  height: 250px;
+  float: left;
+  margin-right: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* CONTACT PAGE */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-gray);
+  padding: 24px;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 24px 0;
+}
+.form-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-grid-item:nth-child(4) {
+  grid-column: 1 / 3;
+  grid-row: 3 / 3;
+}
+input {
+  width: 250px;
+  height: 32px;
+  border: solid var(black) 1px;
+}
+textarea {
+  height: 160px;
+}
+
+/* RESPONSIVE */
+
+@media all and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 64px;
+  }
+}
+@media all and (max-width: 400px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+/* ANIMATIONS */
+
+.chicago-img-background {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+}
+@keyframes color-change {
+  0% {
+    fill: var(--white);
+  }
+  50% {
+    fill: var(--sky-med);
+  }
+  100% {
+    fill: var(--sky-dark);
+  }
+}
