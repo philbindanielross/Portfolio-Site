@@ -72,7 +72,6 @@ p {
   transition: ease-in-out 0.2s;
   font-weight: var(--font-weight-semi-bold);
 }
-/* I can't figure out why this semi-bold value won't apply */
 .nav-link:hover,
 .nav-link:active {
   font-weight: var(--font-weight-bold);
@@ -156,22 +155,29 @@ p {
 /* INDEX */
 .cta-link {
   text-decoration: none;
-  margin-top: 80px;
 }
 
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 .profile-img {
   width: 250px;
   height: 250px;
-  float: left;
+  /* float: left; */
   margin-right: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
-
+.h-desc-and-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
 /* CONTACT PAGE */
 
 .form-container {

@@ -80,7 +80,6 @@ p {
   transition: ease-in-out 0.2s;
   font-weight: 600;
 }
-/* I can't figure out why this semi-bold value won't apply */
 .nav-link:hover {
   font-weight: 700;
   text-decoration: underline;
@@ -196,23 +195,43 @@ p {
 /* INDEX */
 .cta-link {
   text-decoration: none;
-  margin-top: 80px;
 }
 
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .profile-img {
   width: 250px;
   height: 250px;
-  float: left;
+  /* float: left; */
   margin-right: 40px;
   border-radius: 50%;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
+.h-desc-and-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 /* CONTACT PAGE */
 
 .form-container {
