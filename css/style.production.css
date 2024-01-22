@@ -232,6 +232,15 @@ p {
   -ms-flex-align: center;
   align-items: center;
 }
+
+/* ABOUT PAGE */
+
+.about-text {
+  display: inline-block;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+}
+
 /* CONTACT PAGE */
 
 .form-container {
