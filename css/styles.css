@@ -248,14 +248,13 @@ textarea {
   .grid-container {
     grid-template-columns: 1fr;
   }
-  .profile {
-    flex-direction: column;
-  }
+
   .form {
     grid-template-columns: 1fr;
   }
   input {
     max-width: 100%;
+    min-width: 144px;
   }
 }
 h1 {
